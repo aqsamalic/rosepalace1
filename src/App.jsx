@@ -1,11 +1,14 @@
 import Navbar from "./Components/Header/Navbar";
 import WelcomeSection from "./Components/Home/WelcomeSection";
+import Hero from "./Components/Home/Hero";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-blue-600 text-3xl">
+    <div className="">
+      <Hero/>
     <WelcomeSection />
-      Tailwind is working!
+      <Contact/>
     </div>
   );
 }

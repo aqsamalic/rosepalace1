@@ -12,19 +12,16 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-sm border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-18">
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="flex items-center">
               {/* Logo placeholder - you can replace with actual logo */}
-              <div className="w-32 h-10 bg-gradient-to-r from-red-600 to-red-700 rounded flex items-center justify-center">
-                <div className="text-white text-xs font-bold text-center">
-                  <div className="text-green-400">🌹</div>
-                  <div>ROSE PALACE</div>
-                  <div className="text-xs opacity-75">HOTEL • GYM • RESTAURANT</div>
-                </div>
-              </div>
+              <img
+                src="/Images/logo.png" // Adjust the path to your actual logo
+                alt="Logo"
+                className="h-18 w-auto"></img>
             </div>
           </div>
 
@@ -34,7 +31,7 @@ const Navbar = () => {
               {/* Home */}
               <a
                 href="#"
-                className="text-red-600 hover:text-red-700 px-3 py-2 text-sm font-medium border-b-2 border-red-600"
+                className=" hover:text-red-700 px-3 py-2 text-md font-medium border-b-2 border-red-600"
               >
                 Home
               </a>
@@ -43,7 +40,7 @@ const Navbar = () => {
               <div className="relative">
                 <button
                   onClick={() => setIsLocationsOpen(!isLocationsOpen)}
-                  className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium flex items-center"
+                  className="text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium flex items-center"
                 >
                   Locations
                   <ChevronDown className="ml-1 h-4 w-4" />
@@ -68,35 +65,35 @@ const Navbar = () => {
               {/* Other Menu Items */}
               <a
                 href="#"
-                className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium"
+                className="text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium"
               >
                 Rooms & Rates
               </a>
 
               <a
                 href="#"
-                className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium"
+                className="text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium"
               >
                 Restaurant
               </a>
 
               <a
                 href="#"
-                className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium"
+                className="text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium"
               >
                 Gallery
               </a>
 
               <a
                 href="#"
-                className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium"
+                className="text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium"
               >
                 Services
               </a>
 
               <a
-                href="#"
-                className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium"
+                href="/Contact"
+                className="text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium"
               >
                 Contact
               </a>
