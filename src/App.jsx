@@ -4,6 +4,7 @@ import Hero from "./Components/Home/Hero";
 import Contact from "./Components/Contact";
 import PalaceGallery from "./Components/Home/PalaceGallery"
 import Service from "./Components/Home/Service";
+import HotelRoomsSection from "./Components/Home/HotelRoomsSection";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="">
       <Hero/>
     <WelcomeSection />
+    <HotelRoomsSection/>
         <PalaceGallery/>
         <Service/>
       <Contact/>

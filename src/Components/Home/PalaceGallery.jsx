@@ -7,49 +7,49 @@ const PalaceGallery = () => {
   const images = [
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: '/public/Images/img1.jpg',
       title: 'Presidential Suite',
       description: 'Luxurious suite with panoramic city views and premium amenities'
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: '/public/Images/img2.jpg',
       title: 'Grand Lobby',
       description: 'Elegant marble lobby with crystal chandeliers and 24/7 concierge service'
     },
     {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: '/public/Images/img3.jpg',
       title: 'Rose Garden Restaurant',
       description: 'Fine dining restaurant featuring international cuisine and vintage wines'
     },
     {
       id: 4,
-      src: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: '/public/Images/img4.jpg',
       title: 'Infinity Pool',
       description: 'Rooftop infinity pool with stunning sunset views and poolside service'
     },
     {
       id: 5,
-      src: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: '/public/Images/img6.jpg',
       title: 'Royal Spa',
       description: 'World-class spa offering rejuvenating treatments and wellness programs'
     },
     {
       id: 6,
-      src: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: '/public/Images/img6.jpg',
       title: 'Ballroom',
       description: 'Grand ballroom perfect for weddings, conferences, and special events'
     },
     {
       id: 7,
-      src: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: '/public/Images/dd2.jpeg',
       title: 'Deluxe Room',
       description: 'Spacious rooms with modern amenities and breathtaking garden views'
     },
     {
       id: 8,
-      src: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: '/public/Images/dd3.jpeg',
       title: 'Garden Terrace',
       description: 'Beautiful outdoor terrace surrounded by roses and exotic plants'
     }
@@ -82,11 +82,10 @@ const PalaceGallery = () => {
   };
 
   return (
-    <div className="w-full mx-auto p-6 bg-gradient-to-br from-rose-900 via-pink-900 to-red-800">
-      {/* Header */}
+<div className="w-full mx-auto p-6 bg-[#a6192e]">    {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-wide">
-          ROSE PALACE HOTEL
+          ROSE PALACE Gallary
         </h1>
         <p className="text-xl text-gray-300 font-light">
           Luxury Experience & Hospitality

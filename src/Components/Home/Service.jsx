@@ -51,7 +51,7 @@ const Service = () => {
   ];
 
   return (
-    <div className="w-full mx-auto p-6 bg-gradient-to-br from-rose-900 via-pink-900 to-red-800 min-h-screen">
+    <div className="w-full mx-auto p-6 bg-gradient-to-br bg-[#a6192e] min-h-screen">
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-wide">
