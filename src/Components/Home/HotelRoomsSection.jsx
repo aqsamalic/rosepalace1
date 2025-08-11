@@ -3,7 +3,7 @@ import { Star, Wifi, Car, Coffee, Tv, Bath } from 'lucide-react';
 
 const RoomCard = ({ room }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+    <div id='hotel-rooms' className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
       <div className="relative overflow-hidden">
         <img 
           src={room.image} 

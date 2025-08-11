@@ -82,7 +82,7 @@ const PalaceGallery = () => {
   };
 
   return (
-<div className="w-full mx-auto p-6 bg-[#a6192e]">    {/* Header */}
+<div id='palace-gallery' className="w-full mx-auto p-6 bg-[#a6192e]">    {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-wide">
           ROSE PALACE Gallary
