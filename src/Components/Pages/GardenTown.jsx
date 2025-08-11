@@ -5,10 +5,10 @@ import HotelRoomsSection from "../Home/HotelRoomsSection";
 // import Restaurant from "./Restaurant";
 import PalaceGallery from "../Home/PalaceGallery";
 import Service from "../Home/Service";
-import Contact from "../Contact";
-import Footer from "../Footer";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
-export default function Home() {
+export default function GardenTown() {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -38,15 +38,15 @@ export default function Home() {
   return (
     <>
       <main>
-        <section id="home"><Hero /></section>
-        <section id="hotel-rooms"><HotelRoomsSection /></section>
-        {/* <section id="restaurant"><Restaurant /></section> */}
-        <section id="palace-gallery"><PalaceGallery /></section>
-        <section id="services"><Service /></section>
-        <section id="contact"><Contact /></section>
-      </main>
 
-      <Footer />
+  
+  <section id="home"><Hero /></section>
+  <section id="hotel-rooms"><HotelRoomsSection /></section>
+  <section id="palace-gallery"><PalaceGallery /></section>
+  <section id="services"><Service /></section>
+  <section id="contact"><Contact /></section>
+</main>
+
     </>
   );
 }

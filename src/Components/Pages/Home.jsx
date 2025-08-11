@@ -5,8 +5,8 @@ import HotelRoomsSection from "../Home/HotelRoomsSection";
 // import Restaurant from "./Restaurant";
 import PalaceGallery from "../Home/PalaceGallery";
 import Service from "../Home/Service";
-import Contact from "../Contact";
-import Footer from "../Footer";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 export default function Home() {
   const location = useLocation();

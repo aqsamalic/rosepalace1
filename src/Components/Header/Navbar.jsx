@@ -3,7 +3,8 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const [isLocationsOpen, setIsLocationsOpen] = useState(false);
+  const [isLocationsOpenDesktop, setIsLocationsOpenDesktop] = useState(false);
+  const [isLocationsOpenMobile, setIsLocationsOpenMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navRef = useRef(null);
   const dropdownRef = useRef(null);
@@ -12,7 +13,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Menu items for sections of the Home page
   const menuItems = [
     { name: "Home", id: "home" },
     { name: "Rooms & Rates", id: "hotel-rooms" },
@@ -22,14 +22,13 @@ const Navbar = () => {
     { name: "Contact", id: "contact" },
   ];
 
-  // Location pages (full separate routes)
   const locations = [
     { name: "Rose Palace Hotel (Gulberg)", path: "/" },
-    { name: "Hotel Garden Town", path: "./Pages/GardenTown" },
-    { name: "Hotel Liberty Mall 1", path: "/liberty-mall" },
+    { name: "Hotel Garden Town", path: "/pages/gardentown" },
+    { name: "Hotel Liberty Mall 1", path: "/pages/libertymall" },
+    { name: "Restaurant", path: "/pages/restaurant" }, // ✅ Fixed spelling & path
   ];
 
-  // Measure nav height for offset
   useEffect(() => {
     const measure = () => setNavHeight(navRef.current?.offsetHeight || 0);
     measure();
@@ -37,18 +36,16 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", measure);
   }, []);
 
-  // Close dropdown on outside click
   useEffect(() => {
     const onDocClick = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setIsLocationsOpen(false);
+        setIsLocationsOpenDesktop(false);
       }
     };
     document.addEventListener("click", onDocClick);
     return () => document.removeEventListener("click", onDocClick);
   }, []);
 
-  // Smooth scroll for same-page navigation
   const smoothScrollToId = (id) => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -56,7 +53,6 @@ const Navbar = () => {
     window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
   };
 
-  // Scroll to section if on Home, else navigate to Home and then scroll
   const goToSection = (id) => {
     if (location.pathname === "/") {
       smoothScrollToId(id);
@@ -64,6 +60,7 @@ const Navbar = () => {
       navigate("/", { state: { scrollTo: id } });
     }
   };
+  
 
   return (
     <nav
@@ -98,23 +95,23 @@ const Navbar = () => {
               </button>
             ))}
 
-            {/* Locations dropdown */}
+            {/* Desktop Locations dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
-                onClick={() => setIsLocationsOpen((s) => !s)}
+                onClick={() => setIsLocationsOpenDesktop((s) => !s)}
                 className="text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium flex items-center"
               >
                 Locations
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
 
-              {isLocationsOpen && (
+              {isLocationsOpenDesktop && (
                 <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-50">
                   {locations.map((loc) => (
                     <button
                       key={loc.name}
                       onClick={() => {
-                        setIsLocationsOpen(false);
+                        setIsLocationsOpenDesktop(false);
                         navigate(loc.path);
                       }}
                       className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600"
@@ -146,7 +143,7 @@ const Navbar = () => {
             className="fixed inset-0 bg-black bg-opacity-40"
             onClick={() => setIsMobileMenuOpen(false)}
           />
-          <div className="relative bg-white w-72 p-6 shadow-lg z-50">
+          <div className="relative bg-white w-72 p-6 shadow-lg z-50 overflow-y-auto">
             <button
               onClick={() => setIsMobileMenuOpen(false)}
               className="absolute top-4 right-4 text-gray-500"
@@ -168,27 +165,28 @@ const Navbar = () => {
                 </button>
               ))}
 
+              {/* Mobile Locations dropdown */}
               <div className="mt-4">
                 <button
-                  onClick={() => setIsLocationsOpen((s) => !s)}
+                  onClick={() => setIsLocationsOpenMobile((s) => !s)}
                   className="flex justify-between w-full text-gray-700 hover:text-red-600 font-medium"
                 >
                   Locations
                   <ChevronDown
-                    className={`h-4 w-4 transform ${
-                      isLocationsOpen ? "rotate-180" : ""
+                    className={`h-4 w-4 transform transition-transform ${
+                      isLocationsOpenMobile ? "rotate-180" : ""
                     }`}
                   />
                 </button>
 
-                {isLocationsOpen && (
+                {isLocationsOpenMobile && (
                   <div className="mt-2 space-y-2 pl-3">
                     {locations.map((loc) => (
                       <button
                         key={loc.name}
                         onClick={() => {
                           setIsMobileMenuOpen(false);
-                          setIsLocationsOpen(false);
+                          setIsLocationsOpenMobile(false);
                           navigate(loc.path);
                         }}
                         className="block text-sm text-gray-600 hover:text-red-600 w-full text-left"
