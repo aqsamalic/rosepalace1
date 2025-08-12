@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import Hero from "../Home/Hero";
-import HotelRoomsSection from "../Home/HotelRoomsSection";
+import LibertyHero from "../LibertyMallComponents/LibertyHero";
+import LibertyWecome from "../LibertyMallComponents/LibertyWelcome";
+import LibertyGallery from "../LibertyMallComponents/LibertyGallery";
 // import Restaurant from "./Restaurant";
-import PalaceGallery from "../Home/PalaceGallery";
-import Service from "../Home/Service";
+import LibertyService from "../LibertyMallComponents/LibertyServices";
+
+import LibertyRooms from "../LibertyMallComponents/LibertyRooms";
 import Contact from "./Contact";
 import Footer from "./Footer";
+
 
 export default function LibertyMall() {
   const location = useLocation();
@@ -40,10 +43,11 @@ export default function LibertyMall() {
        <main>
       
         
-        <section id="home"><Hero /></section>
-        <section id="hotel-rooms"><HotelRoomsSection /></section>
-        <section id="palace-gallery"><PalaceGallery /></section>
-        <section id="services"><Service /></section>
+        <section id="home"><LibertyHero /></section>
+        <section id=""><LibertyWecome /></section>
+        <section id="hotel-rooms"><LibertyRooms /></section>
+        <section id="palace-gallery"><LibertyGallery /></section>
+        <section id="services"><LibertyService /></section>
         <section id="contact"><Contact /></section>
       </main>
       

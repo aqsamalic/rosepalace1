@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import Hero from "../Home/Hero";
-import HotelRoomsSection from "../Home/HotelRoomsSection";
+import GardenHero from "../GardenTownComponents/GardenHero";
+import GardenRooms from "../GardenTownComponents/GardenRooms";
 // import Restaurant from "./Restaurant";
-import PalaceGallery from "../Home/PalaceGallery";
-import Service from "../Home/Service";
+import GardenGallery from "../GardenTownComponents/GardenGallery";
+import GardenServices from "../GardenTownComponents/GardenServices";
 import Contact from "./Contact";
+import GardenWelcom from "../GardenTownComponents/GardenWelcom";
 import Footer from "./Footer";
 
 export default function GardenTown() {
@@ -40,10 +41,11 @@ export default function GardenTown() {
       <main>
 
   
-  <section id="home"><Hero /></section>
-  <section id="hotel-rooms"><HotelRoomsSection /></section>
-  <section id="palace-gallery"><PalaceGallery /></section>
-  <section id="services"><Service /></section>
+  <section id="home"><GardenHero /></section>
+  <section id=""><GardenWelcom /></section>
+  <section id="hotel-rooms"><GardenRooms /></section>
+  <section id="palace-gallery"><GardenGallery /></section>
+  <section id="services"><GardenServices /></section>
   <section id="contact"><Contact /></section>
 </main>
 
