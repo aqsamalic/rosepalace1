@@ -53,9 +53,9 @@ export default function GardenRooms() {
   const rooms = [
     {
       id: 1,
-      title: "Deluxe King Room",
-      description: "A popular choice for couples, this room features a king-size bed for two, a refrigerator, a mini bar, a private bathroom, and air conditioning for a comfortable stay.",
-      price:7000,
+      title: "Deluxe Room",
+      description: "This double room features a seating area, air conditioning and sofa.",
+      price:5000,
       rating: 4.8,
       badge: "Popular",
       image: "/public/Images/kingroom.jpg",
@@ -68,9 +68,9 @@ export default function GardenRooms() {
     },
     {
       id: 2,
-      title: "Superior King or Twin Room",
+      title: "Deluxe Twin Room",
       description: "Guaranteed with a king-size bed, though twin beds may be provided based on availability. The room includes a balcony, seating area, and dining space.",
-      price:7500,
+      price:5500,
       rating: 4.9,
       badge: "Premium",
       image: "/public/Images/supirorkindtwin.jpg",
@@ -83,9 +83,9 @@ export default function GardenRooms() {
     },
     {
       id: 3,
-      title: "Executive Triple Room",
+      title: "Executive Room",
       description: "Similar to the King Superior, but fitted with twin beds. It also offers a balcony, seating area, and dining space for added comfort.",
-      price:8500,
+      price:6500,
       rating: 4.6,
       badge: "Best Value",
       image: "/public/Images/tripleroom.jpg",
@@ -103,7 +103,7 @@ export default function GardenRooms() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our Premium Rooms AQSA
+            Our Premium Rooms
           </h2>
           <p className="text-white/90 text-lg max-w-2xl mx-auto">
             Experience comfort and luxury in our thoughtfully designed accommodations, 

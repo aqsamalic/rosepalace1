@@ -7,19 +7,19 @@ const GardenGallery = () => {
   const images = [
     {
       id: 1,
-      src: '/public/Images/img1.jpg',
+      src: '/public/Images/graden1.jpg',
       title: 'Presidential Suite',
       description: 'Luxurious suite with panoramic city views and premium amenities'
     },
     {
       id: 2,
-      src: '/public/Images/img2.jpg',
+      src: '/public/Images/garden2.jpg',
       title: 'Grand Lobby',
       description: 'Elegant marble lobby with crystal chandeliers and 24/7 concierge service'
     },
     {
       id: 3,
-      src: '/public/Images/img3.jpg',
+      src: '/public/Images/garden3.jpg',
       title: 'Rose Garden Restaurant',
       description: 'Fine dining restaurant featuring international cuisine and vintage wines'
     },

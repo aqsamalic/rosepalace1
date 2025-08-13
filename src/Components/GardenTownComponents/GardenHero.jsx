@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const images = [
-  "/Images/banner1.jpg",
-  "/Images/banner2.jpeg",
-  "/Images/banner3.jpeg"
+  "/public/Images/gardentownbanner.png",
+  "/public/Images/gardentownbanner.png",
+  "/public/images/gardentownbanner2.jpeg"
 ];
 
 export default function GardenHero() {

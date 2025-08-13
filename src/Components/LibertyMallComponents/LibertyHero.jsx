@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const images = [
-  "/Images/banner1.jpg",
-  "/Images/banner2.jpeg",
+  "/public/Images/hotel1Breakfast.jpg",
+  "/public/Images/hotel1.png",
   "/Images/banner3.jpeg"
 ];
 

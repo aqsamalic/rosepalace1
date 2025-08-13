@@ -8,15 +8,12 @@ const LibertySection = () => {
         {/* Text Section */}
         <div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#a6192e] mb-4 uppercase text-center md:text-left">
-            Welcome to Rose Palace Aqsa
+            Welcome to Rose Palace 
           </h2>
           <div className="w-20 h-1 bg-yellow-500 mb-6 mx-auto md:mx-0"></div>
 
           <p className="text-gray-700 mb-4">
-            Located in Lahore, 23 km from Wagah Border, Rose Palace Hotel, Gulberg
-            provides accommodation with a restaurant, free private parking, a fitness
-            centre and a shared lounge. Featuring a garden, the 3-star hotel has
-            air-conditioned rooms with free WiFi, each with a private bathroom.
+           Located in Lahore, 24.1 km from Wagah Border, Rose Palace Hotel, Liberty has accommodations with a shared lounge, private parking, barbecue facilities, and a terrace. Among the facilities at this property are a shared kitchen and room service, along with free WiFi throughout the property. The property provides a fitness center, evening entertainment, and a 24-hour front desk. Complete with a private bathroom equipped with a shower and slippers, guest rooms at the hotel have a flat-screen TV and air conditioning, and selected rooms include a seating area. At Rose Palace Hotel, Liberty every room is equipped with bed linen and towels.
           </p>
 
           <p className="text-gray-700 mb-4">

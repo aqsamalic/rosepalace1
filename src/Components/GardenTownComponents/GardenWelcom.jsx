@@ -8,15 +8,12 @@ const WelcomeSection = () => {
         {/* Text Section */}
         <div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#a6192e] mb-4 uppercase text-center md:text-left">
-            Welcome to Rose Palace Aqsa
+            Welcome to Rose Palace
           </h2>
           <div className="w-20 h-1 bg-yellow-500 mb-6 mx-auto md:mx-0"></div>
 
           <p className="text-gray-700 mb-4">
-            Located in Lahore, 23 km from Wagah Border, Rose Palace Hotel, Gulberg
-            provides accommodation with a restaurant, free private parking, a fitness
-            centre and a shared lounge. Featuring a garden, the 3-star hotel has
-            air-conditioned rooms with free WiFi, each with a private bathroom.
+            Rose Palace Hotel, Garden Town! To save at this property, all you have to do is Featuring free WiFi throughout the property, Rose Palace Hotel, Garden Town offers accommodation in Lahore, The hotel has a barbecue and sun terrace, and guests can enjoy a meal at the restaurant. Free private parking is available on site.Rooms are stylish and well-appointed. Each is fitted with minibar. The apartments come equipped with a living area and a kitchenette.Guests can also rent a car to explore the city or indulge in some quiet time at the library. Free parking facilities are available on-site. A 24-hour front desk will be happy to assist with luggage storage space and currency exchange services. Travel arrangements can be made at the tour desk. This modern building is located very near from the historical Lahore Fort and Badshahi Mosque. The National Museum is also very near. For meals, CI Restaurant will serve local Pakistani, Indian and continental cuisines. For alternative dining options, 24-hour room service is available.
           </p>
 
           <p className="text-gray-700 mb-4">
@@ -37,7 +34,7 @@ const WelcomeSection = () => {
         {/* Image Section */}
         <div className="rounded-lg shadow-lg overflow-hidden">
           <img
-            src="../../public/Images/welcome.jpeg" // Adjust the path to your actual image
+            src="/public/Images/welcomimg.jpeg" // Adjust the path to your actual image
             alt="Rose Palace Hotel Room"
             className="w-full h-auto object-cover"
           />
