@@ -168,7 +168,7 @@ export default function RosePalaceRestaurant() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">Address</h4>
-                      <p className="text-gray-600">Main Boulevard, Gulberg III, Lahore, Punjab 54000, Pakistan</p>
+                      <p className="text-gray-600">55 Gurumangat Road, Block N Gulberg 2, Lahore, Punjab, Pakistan</p>
                     </div>
                   </div>
 
@@ -180,8 +180,8 @@ export default function RosePalaceRestaurant() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">Phone</h4>
-                      <p className="text-gray-600">+92 42 3587 1234</p>
-                      <p className="text-gray-600">+92 300 1234567</p>
+                      <p className="text-gray-600">+92 314 433 7172 </p>
+                      <p className="text-gray-600">+92 317 433 7172 </p>
                     </div>
                   </div>
 

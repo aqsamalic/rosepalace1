@@ -58,7 +58,7 @@ export default function GardenRooms() {
       price:5000,
       rating: 4.8,
       badge: "Popular",
-      image: "/public/Images/kingroom.jpg",
+      image: "https://i.ibb.co/nq2GgBdq/f68f0462-2aae-4219-b080-c11da075.jpg",
       amenities: [
         { name: "WiFi", icon: <Wifi className="w-3 h-3" /> },
         { name: "Parking", icon: <Car className="w-3 h-3" /> },
@@ -73,7 +73,7 @@ export default function GardenRooms() {
       price:5500,
       rating: 4.9,
       badge: "Premium",
-      image: "/public/Images/supirorkindtwin.jpg",
+      image: "https://i.ibb.co/fYcPJtRD/302f5ae5-f6da-4fd6-9056-efe21e65.jpg",
       amenities: [
         { name: "WiFi", icon: <Wifi className="w-3 h-3" /> },
         { name: "Parking", icon: <Car className="w-3 h-3" /> },
@@ -88,7 +88,7 @@ export default function GardenRooms() {
       price:6500,
       rating: 4.6,
       badge: "Best Value",
-      image: "/public/Images/tripleroom.jpg",
+      image: "https://i.ibb.co/B2LbkS1M/ae94b361-78a6-448e-b501-e184df04.jpg",
       amenities: [
         { name: "WiFi", icon: <Wifi className="w-3 h-3" /> },
         { name: "Parking", icon: <Car className="w-3 h-3" /> },

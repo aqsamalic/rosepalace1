@@ -177,7 +177,7 @@ const BuffetPricingCards = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="text-center bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-2xl p-8 border border-gray-600">
+        {/* <div className="text-center bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-2xl p-8 border border-gray-600">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Experience Premium Dining?</h3>
           <p className="text-gray-300 mb-6">Book your table now and enjoy Pakistan's largest buffet experience</p>
           
@@ -197,12 +197,12 @@ const BuffetPricingCards = () => {
               <MessageCircle className="w-8 h-8 text-white" />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Additional Info */}
-        <div className="mt-8 text-center text-gray-400 text-sm">
+        {/* <div className="mt-8 text-center text-gray-400 text-sm">
           <p>• All prices include taxes • Advance booking recommended • Special packages available for groups</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

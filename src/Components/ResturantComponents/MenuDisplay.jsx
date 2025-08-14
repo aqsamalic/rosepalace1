@@ -174,7 +174,7 @@ const MenuDisplay = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="mt-16 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-white text-center">
+        {/* <div className="mt-16 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-white text-center">
           <h3 className="text-3xl font-bold mb-4">Experience Pakistan's Largest Buffet</h3>
           <p className="text-xl mb-6 opacity-90">500+ Feet Long Buffet • 150+ Premium Items • 5-Star Service</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -185,12 +185,12 @@ const MenuDisplay = () => {
               View Location
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Footer Info */}
-        <div className="mt-8 text-center text-gray-500 text-sm">
+        {/* <div className="mt-8 text-center text-gray-500 text-sm">
           <p>• Advance booking recommended • Special group packages available • All prices include taxes •</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -7,43 +7,43 @@ const LibertyGallery = () => {
   const images = [
     {
       id: 1,
-      src: '/public/Images/img1.jpg',
+      src: 'https://i.ibb.co/0ykYnnQq/bd75626c-1efb-4000-9d01-70b19f21.jpg',
       title: 'Presidential Suite',
       description: 'Luxurious suite with panoramic city views and premium amenities'
     },
     {
       id: 2,
-      src: '/public/Images/img2.jpg',
+      src: 'https://i.ibb.co/cSB7ZdYf/d2effc30-d813-44c6-802f-5c534ea7.jpg',
       title: 'Grand Lobby',
       description: 'Elegant marble lobby with crystal chandeliers and 24/7 concierge service'
     },
     {
       id: 3,
-      src: '/public/Images/img3.jpg',
+      src: 'https://i.ibb.co/BJw58JB/882534f2-5c4e-4b41-8b64-3f763199.jpg',
       title: 'Rose Garden Restaurant',
       description: 'Fine dining restaurant featuring international cuisine and vintage wines'
     },
     {
       id: 4,
-      src: '/public/Images/img4.jpg',
+      src: 'https://i.ibb.co/gZQzRr2C/da5c0b71-63a8-4b3d-8fb6-525dff1b.jpg',
       title: 'Infinity Pool',
       description: 'Rooftop infinity pool with stunning sunset views and poolside service'
     },
     {
       id: 5,
-      src: '/public/Images/img6.jpg',
+      src: 'https://i.ibb.co/0ykYnnQq/bd75626c-1efb-4000-9d01-70b19f21.jpg',
       title: 'Royal Spa',
       description: 'World-class spa offering rejuvenating treatments and wellness programs'
     },
     {
       id: 6,
-      src: '/public/Images/img6.jpg',
+      src: 'https://i.ibb.co/h14B7n99/ca43a1d9-8c8a-4d64-b6d6-81ccc968.jpg',
       title: 'Ballroom',
       description: 'Grand ballroom perfect for weddings, conferences, and special events'
     },
     {
       id: 7,
-      src: '/public/Images/dd2.jpeg',
+      src: 'https://i.ibb.co/4w17kNCK/13d5f715-73d4-4cb3-929a-d21de66d.jpg',
       title: 'Deluxe Room',
       description: 'Spacious rooms with modern amenities and breathtaking garden views'
     },

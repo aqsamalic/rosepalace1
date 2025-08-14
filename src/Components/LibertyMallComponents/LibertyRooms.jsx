@@ -53,12 +53,12 @@ export default function LibertyRooms() {
   const rooms = [
     {
       id: 1,
-      title: "Deluxe King Room",
+      title: "Deluxe Room",
       description: "A popular choice for couples, this room features a king-size bed for two, a refrigerator, a mini bar, a private bathroom, and air conditioning for a comfortable stay.",
-      price:7000,
+      price:3600,
       rating: 4.8,
       badge: "Popular",
-      image: "/public/Images/kingroom.jpg",
+      image: "https://i.ibb.co/KcHKPjNc/eb6522e8-1416-4647-91d3-994b9f7d-1.jpg",
       amenities: [
         { name: "WiFi", icon: <Wifi className="w-3 h-3" /> },
         { name: "Parking", icon: <Car className="w-3 h-3" /> },
@@ -68,12 +68,12 @@ export default function LibertyRooms() {
     },
     {
       id: 2,
-      title: "Superior King or Twin Room",
+      title: "Standard Double Room",
       description: "Guaranteed with a king-size bed, though twin beds may be provided based on availability. The room includes a balcony, seating area, and dining space.",
-      price:7500,
+      price:4200,
       rating: 4.9,
       badge: "Premium",
-      image: "/public/Images/supirorkindtwin.jpg",
+      image: "https://i.ibb.co/fYcPJtRD/302f5ae5-f6da-4fd6-9056-efe21e65.jpg",
       amenities: [
         { name: "WiFi", icon: <Wifi className="w-3 h-3" /> },
         { name: "Parking", icon: <Car className="w-3 h-3" /> },
@@ -83,12 +83,12 @@ export default function LibertyRooms() {
     },
     {
       id: 3,
-      title: "Executive Triple Room",
+      title: "Deluxe King Room",
       description: "Similar to the King Superior, but fitted with twin beds. It also offers a balcony, seating area, and dining space for added comfort.",
-      price:8500,
+      price:7400,
       rating: 4.6,
       badge: "Best Value",
-      image: "/public/Images/tripleroom.jpg",
+      image: "https://i.ibb.co/bV8GPhL/45ee88cc-4697-4b34-acdf-cf11e9cd-1.jpg",
       amenities: [
         { name: "WiFi", icon: <Wifi className="w-3 h-3" /> },
         { name: "Parking", icon: <Car className="w-3 h-3" /> },
@@ -103,7 +103,7 @@ export default function LibertyRooms() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our Premium Rooms AQSA
+            Our Premium Rooms 
           </h2>
           <p className="text-white/90 text-lg max-w-2xl mx-auto">
             Experience comfort and luxury in our thoughtfully designed accommodations, 

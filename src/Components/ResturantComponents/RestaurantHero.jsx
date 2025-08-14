@@ -6,8 +6,8 @@ const RestaurantHero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const heroImages = [
-    'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    'https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    'https://i.ibb.co/spHBFQn5/493850038-1191270912793720-761752691122728343-n-Yle-Q5-VNJXPfo-L7-Kk-1.jpg',
+    'https://i.ibb.co/931CrRc9/whatsapp-image-2025-04-02-at-21-45-38-m6-LZ40-NKEKce-Xo-JJ.jpg',
     'https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80'
   ];
 

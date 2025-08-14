@@ -99,22 +99,22 @@ const RestaurantAboutSection = () => {
               </div>
 
               {/* Experience Badge */}
-              <div className="absolute bottom-6 right-6 bg-red-600/90 backdrop-blur-sm text-white rounded-xl px-6 py-3 shadow-lg">
+              {/* <div className="absolute bottom-6 right-6 bg-red-600/90 backdrop-blur-sm text-white rounded-xl px-6 py-3 shadow-lg">
                 <div className="text-center">
                   <div className="text-2xl font-bold">20+</div>
                   <div className="text-sm">Years Experience</div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-red-600/10 rounded-full"></div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-red-600/5 rounded-full"></div>
+            {/* <div className="absolute -top-4 -left-4 w-24 h-24 bg-red-600/10 rounded-full"></div>
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-red-600/5 rounded-full"></div> */}
           </div>
         </div>
 
         {/* Stats Section */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 mb-16">
+        {/* <div className="bg-white rounded-3xl shadow-xl p-8 mb-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
@@ -132,10 +132,10 @@ const RestaurantAboutSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Additional Info Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="flex items-center space-x-3 mb-4">
               <div className="p-3 bg-green-100 rounded-full">
@@ -171,10 +171,10 @@ const RestaurantAboutSection = () => {
               Recognized as one of Lahore's finest dining establishments with multiple culinary awards.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">Ready to Experience Excellence?</h3>
             <p className="text-xl mb-6 opacity-90">Book your table today and taste the difference quality makes</p>
@@ -187,7 +187,7 @@ const RestaurantAboutSection = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

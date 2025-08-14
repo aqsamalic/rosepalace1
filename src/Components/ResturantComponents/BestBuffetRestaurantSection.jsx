@@ -104,7 +104,7 @@ const BestBuffetRestaurantSection = () => {
 
                   {/* Bottom Section - Contact Info */}
                   <div className="text-center text-sm opacity-90">
-                    <p>0000-123-456 | 0301-789-000 | WWW.ROSEPALACELRESTAURANT.COM</p>
+                    <p>0314 433 7172  | 0317 433 7172  | WWW.ROSEPALACELRESTAURANT.COM</p>
                   </div>
                 </div>
 
@@ -138,7 +138,7 @@ const BestBuffetRestaurantSection = () => {
         </div>
 
         {/* Bottom Statistics Section */}
-        <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 text-white">
+        {/* <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 text-white">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="flex justify-center mb-3">
@@ -180,7 +180,7 @@ const BestBuffetRestaurantSection = () => {
               <div className="text-sm opacity-90">Years Excellence</div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Call to Action Section */}
         <div className="mt-16 text-center">
