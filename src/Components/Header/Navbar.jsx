@@ -13,20 +13,21 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Main menu now includes Restaurant as a page link (path) instead of scroll id
   const menuItems = [
     { name: "Home", id: "home" },
     { name: "Rooms & Rates", id: "hotel-rooms" },
-    { name: "Restaurant", id: "restaurant" },
     { name: "Gallery", id: "palace-gallery" },
     { name: "Services", id: "services" },
     { name: "Contact", id: "contact" },
+    { name: "Restaurant", path: "/pages/restaurant" }, // ✅ page navigation
   ];
 
+  // Locations dropdown without Restaurant
   const locations = [
     { name: "Rose Palace Hotel (Gulberg)", path: "/" },
     { name: "Hotel Garden Town", path: "/pages/gardentown" },
     { name: "Hotel Liberty Mall 1", path: "/pages/libertymall" },
-    { name: "Restaurant", path: "/pages/restaurant" }, // ✅ Fixed spelling & path
   ];
 
   useEffect(() => {
@@ -60,7 +61,6 @@ const Navbar = () => {
       navigate("/", { state: { scrollTo: id } });
     }
   };
-  
 
   return (
     <nav
@@ -87,8 +87,14 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-6 items-center">
             {menuItems.map((item) => (
               <button
-                key={item.id}
-                onClick={() => goToSection(item.id)}
+                key={item.name}
+                onClick={() => {
+                  if (item.path) {
+                    navigate(item.path); // page navigation
+                  } else {
+                    goToSection(item.id); // smooth scroll
+                  }
+                }}
                 className="text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium"
               >
                 {item.name}
@@ -154,9 +160,13 @@ const Navbar = () => {
             <nav className="mt-8 space-y-4">
               {menuItems.map((item) => (
                 <button
-                  key={item.id}
+                  key={item.name}
                   onClick={() => {
-                    goToSection(item.id);
+                    if (item.path) {
+                      navigate(item.path);
+                    } else {
+                      goToSection(item.id);
+                    }
                     setIsMobileMenuOpen(false);
                   }}
                   className="block w-full text-left text-gray-700 hover:text-red-600 font-medium"

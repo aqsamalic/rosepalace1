@@ -24,7 +24,7 @@ const RestaurantHero = () => {
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div id='' className="relative h-screen w-full overflow-hidden">
       {/* Background Image Slider */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
@@ -46,19 +46,7 @@ const RestaurantHero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
 
-      {/* Navigation */}
-      <nav className="relative z-20 flex items-center justify-between px-6 py-4 lg:px-12">
-        <div className="text-2xl font-bold text-white">
-          Bella Vista
-        </div>
-        <div className="hidden md:flex space-x-8 text-white">
-          <button className="hover:text-amber-400 transition-colors duration-300">Menu</button>
-          <button className="hover:text-amber-400 transition-colors duration-300">About</button>
-          <button className="hover:text-amber-400 transition-colors duration-300">Reservations</button>
-          <button className="hover:text-amber-400 transition-colors duration-300">Contact</button>
-        </div>
-      </nav>
-
+     
       {/* Hero Content */}
       <div className="relative z-10 flex h-full items-center px-6 lg:px-12">
         <div className={`max-w-2xl transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>

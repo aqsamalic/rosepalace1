@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function RosePalaceRestaurant() {
   return (
-    <div className="min-h-screen bg-red-600 text-white">
+    <div id='reserve' className="min-h-screen bg-red-600 text-white">
       {/* Header Section */}
       <div className="text-center py-16 px-4">
         <h1 className="text-6xl font-bold mb-8 tracking-wider">Rose Palace Restaurant</h1>
