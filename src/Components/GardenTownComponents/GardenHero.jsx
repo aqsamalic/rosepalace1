@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const images = [
-  "/public/Images/gardentownbanner.png",
-  "/public/Images/gardentownbanner.png",
-  "/public/images/gardentownbanner2.jpeg"
-];
+// ✅ Make sure your files are inside /src/assets/ with correct extensions
+import banner1 from "../../assets/banner1.jpg";
+import banner2 from "../../assets/banner2.jpeg";
+
+const images = [banner1, banner2];
 
 export default function GardenHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,25 +28,11 @@ export default function GardenHero() {
         />
       </div>
 
- 
-    
+      {/* Overlay for dark effect */}
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 h-full flex flex-col justify-center items-center px-4">
-        <div className="flex flex-col text-center lg:text-left lg:absolute lg:top-1/4 2xl:top-1/3 2xl:left-12 lg:left-1/3">
-          {/* <h2 className="text-3xl md:text-5xl font-serif tracking-wide">
-            Lawrence View Hotel
-          </h2>
-          <p className="mt-4 text-sm md:text-lg lg:text-xl max-w-md">
-            Welcome to Lawrence View Hotel, where comfort meets elegance in the heart of Lahore and the breathtaking landscapes of Malam Jabba. Whether you're here for business or leisure, our warm hospitality, modern amenities, and serene ambiance ensure a memorable stay.
-          </p> */}
-          {/* <Link to="/about">
-            <button className="bg-[#b89628] text-white px-6 py-2 mt-6 rounded-md hover:bg-[#a5821f] transition">
-              Explore More
-            </button>
-          </Link> */}
-        </div>
-      </div>
+    
     </div>
   );
 }

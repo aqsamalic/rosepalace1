@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const images = [
-  "/public/Images/hotel1Breakfast.jpg",
-  "/public/Images/hotel1.png",
-  "/Images/banner3.jpeg"
-];
+// ✅ Import images from src/assets
+import hotel1Breakfast from "../../assets/hotel1Breakfast.jpg";
+import hotel1 from "../../assets/hotel1.png";
+import banner3 from "../../assets/banner3.jpeg";
+
+const images = [hotel1Breakfast, hotel1, banner3];
 
 export default function LibertyHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,23 +29,23 @@ export default function LibertyHero() {
         />
       </div>
 
- 
-    
-
       {/* Content */}
       <div className="relative z-20 h-full flex flex-col justify-center items-center px-4">
         <div className="flex flex-col text-center lg:text-left lg:absolute lg:top-1/4 2xl:top-1/3 2xl:left-12 lg:left-1/3">
-          {/* <h2 className="text-3xl md:text-5xl font-serif tracking-wide">
+          {/* Example text & button (uncomment if needed) */}
+          {/* 
+          <h2 className="text-3xl md:text-5xl font-serif tracking-wide">
             Lawrence View Hotel
           </h2>
           <p className="mt-4 text-sm md:text-lg lg:text-xl max-w-md">
-            Welcome to Lawrence View Hotel, where comfort meets elegance in the heart of Lahore and the breathtaking landscapes of Malam Jabba. Whether you're here for business or leisure, our warm hospitality, modern amenities, and serene ambiance ensure a memorable stay.
-          </p> */}
-          {/* <Link to="/about">
+            Welcome to Lawrence View Hotel, where comfort meets elegance in the heart of Lahore and the breathtaking landscapes of Malam Jabba. 
+          </p>
+          <Link to="/about">
             <button className="bg-[#b89628] text-white px-6 py-2 mt-6 rounded-md hover:bg-[#a5821f] transition">
               Explore More
             </button>
-          </Link> */}
+          </Link> 
+          */}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../../assets/logo.png";
 
 const RestaurantNavbar = ({ onSectionChange }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ const RestaurantNavbar = ({ onSectionChange }) => {
             className="flex items-center focus:outline-none"
           >
             <img
-              src="/Images/logo.png"
+              src={logo}
               alt="Logo"
               className="h-14 w-auto lg:h-20"
             />

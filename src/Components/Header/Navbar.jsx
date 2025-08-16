@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [isLocationsOpenDesktop, setIsLocationsOpenDesktop] = useState(false);
@@ -76,7 +77,7 @@ const Navbar = () => {
               className="flex items-center focus:outline-none"
             >
               <img
-                src="/Images/logo.png"
+                src={logo}
                 alt="Logo"
                 className="h-14 w-auto lg:h-20"
               />

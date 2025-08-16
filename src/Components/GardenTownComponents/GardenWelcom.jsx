@@ -1,4 +1,5 @@
 import React from "react";
+import welcome from "../../assets/welcome.jpeg"; // Adjust the path to your actual image
  // adjust the path to your actual image
 
 const WelcomeSection = () => {
@@ -34,7 +35,7 @@ const WelcomeSection = () => {
         {/* Image Section */}
         <div className="rounded-lg shadow-lg overflow-hidden">
           <img
-            src="/public/Images/welcomimg.jpeg" // Adjust the path to your actual image
+            src={welcome} // Adjust the path to your actual image
             alt="Rose Palace Hotel Room"
             className="w-full h-auto object-cover"
           />
