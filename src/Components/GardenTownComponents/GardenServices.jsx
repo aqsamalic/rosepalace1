@@ -55,7 +55,7 @@ const GardenService = () => {
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-wide">
-          ROSE PALACE SERVICES Aqsa
+          ROSE PALACE SERVICES 
         </h1>
         <p className="text-xl text-gray-300 font-light mb-2">
           Exceptional Services for Distinguished Guests

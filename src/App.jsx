@@ -10,6 +10,7 @@ import Contact from "./Components/Pages/Contact";
 import GardenTown from "./Components/Pages/GardenTown";
 import LibertyMall from "./Components/Pages/LibertyMall";
 import Restaurant from "./Components/Pages/Restaurant";
+import WhatsAppButton from "./Components/Pages/WhatsAppButton";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/home/service" element={<Service />} />
         <Route path="/pages/contact" element={<Contact />} />
       </Routes>
+       <WhatsAppButton />
       <Footer />
     </>
   );

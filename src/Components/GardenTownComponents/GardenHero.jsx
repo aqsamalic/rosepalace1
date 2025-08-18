@@ -28,10 +28,7 @@ export default function GardenHero() {
         />
       </div>
 
-      {/* Overlay for dark effect */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-
-      {/* Content */}
+    
     
     </div>
   );

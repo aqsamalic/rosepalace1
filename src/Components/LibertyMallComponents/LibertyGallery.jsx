@@ -88,7 +88,7 @@ const LibertyGallery = () => {
           ROSE PALACE Gallary
         </h1>
         <p className="text-xl text-gray-300 font-light">
-          Luxury Experience & Hospitality AQSA
+          Luxury Experience & Hospitality 
         </p>
       </div>
 
