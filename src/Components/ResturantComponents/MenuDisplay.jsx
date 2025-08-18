@@ -76,7 +76,7 @@ const MenuDisplay = () => {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5 text-red-600" />
-              <span>(042) 123-456-789</span>
+              <span>0314 433 7172 </span>
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5 text-yellow-500" />

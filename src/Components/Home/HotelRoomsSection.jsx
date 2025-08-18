@@ -58,7 +58,7 @@ export default function HotelRoomsSection() {
       price:7000,
       rating: 4.8,
       badge: "Popular",
-      image: "/public/Images/kingroom.jpg",
+      image: "https://i.ibb.co/SXSyfryP/18b618a5-120c-4ecd-ba8c-14502a6e.jpg",
       amenities: [
         { name: "WiFi", icon: <Wifi className="w-3 h-3" /> },
         { name: "Parking", icon: <Car className="w-3 h-3" /> },
@@ -73,7 +73,7 @@ export default function HotelRoomsSection() {
       price:7500,
       rating: 4.9,
       badge: "Premium",
-      image: "/public/Images/supirorkindtwin.jpg",
+      image: "https://i.ibb.co/ycYhBFz8/da0e03e4-27f7-42ae-9650-4939d3e1.jpg",
       amenities: [
         { name: "WiFi", icon: <Wifi className="w-3 h-3" /> },
         { name: "Parking", icon: <Car className="w-3 h-3" /> },
@@ -88,7 +88,7 @@ export default function HotelRoomsSection() {
       price:8500,
       rating: 4.6,
       badge: "Best Value",
-      image: "/public/Images/tripleroom.jpg",
+      image: "https://i.ibb.co/N6Q5z8gV/a17371f6-8656-4e42-8ae2-60373f74.jpg",
       amenities: [
         { name: "WiFi", icon: <Wifi className="w-3 h-3" /> },
         { name: "Parking", icon: <Car className="w-3 h-3" /> },

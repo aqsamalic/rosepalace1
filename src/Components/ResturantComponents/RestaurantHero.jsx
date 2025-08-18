@@ -62,7 +62,7 @@ const RestaurantHero = () => {
 
           {/* Main Heading */}
           <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Exceptional
+            Rose Palace
             <span className="block text-[#a6192e]">Dining</span>
             Experience
           </h1>
@@ -78,21 +78,31 @@ const RestaurantHero = () => {
               <Clock className="h-5 w-5 text-[#a6192e]" />
               <span>Open until 11 PM</span>
             </div>
-            <div className="flex items-center space-x-2">
+            {/* <div className="flex items-center space-x-2">
               <MapPin className="h-5 w-5 text-[#a6192e]" />
-              <span>Downtown District</span>
-            </div>
+            </div> */}
             <div className="flex items-center space-x-2">
               <Phone className="h-5 w-5 text-[#a6192e]" />
-              <span>(555) 123-4567</span>
+              <span>0314 433 7172</span>
             </div>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="group bg-[#a6192e] hover:bg-amber-600 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:scale-105">
-              <span className="group-hover:mr-2 transition-all duration-300">Reserve a Table</span>
-            </button>
+            <button
+  onClick={() =>
+    window.open(
+      "https://wa.me/923144337172?text=Hi, I would like to reserve a table.",
+      "_blank"
+    )
+  }
+  className="group bg-[#a6192e] hover:bg-amber-600 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:scale-105"
+>
+  <span className="group-hover:mr-2 transition-all duration-300">
+    Reserve a Table
+  </span>
+</button>
+
             <button 
               onClick={scrollToMenu}
               className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl"
@@ -124,13 +134,13 @@ const RestaurantHero = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-1/4 right-10 lg:right-20 z-10 hidden lg:block">
+      {/* <div className="absolute top-1/4 right-10 lg:right-20 z-10 hidden lg:block">
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white max-w-xs">
           <h3 className="font-semibold text-lg mb-2">Today's Special</h3>
           <p className="text-sm text-gray-200 mb-3">Grilled Salmon with Herbs</p>
           <div className="text-2xl font-bold text-amber-400">$28</div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

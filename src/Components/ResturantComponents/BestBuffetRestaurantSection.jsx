@@ -205,7 +205,7 @@ const BestBuffetRestaurantSection = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="mt-8 pt-6 border-t border-gray-300">
+            {/* <div className="mt-8 pt-6 border-t border-gray-300">
               <div className="flex flex-wrap justify-center items-center gap-6 text-gray-600">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
@@ -220,7 +220,7 @@ const BestBuffetRestaurantSection = () => {
                   <span>Gulberg, Lahore</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
