@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // ✅ Desktop images (inside src/assets/)
-import hotel1Breakfast from "../../assets/hotel1Breakfast.jpg";
-import hotel1 from "../../assets/hotel1.png";
-import banner3 from "../../assets/banner3.jpeg";
+import hotel1Breakfast from "../../assets/r7.jpeg";
+import hotel1 from "../../assets/r8.jpeg";
+import banner3 from "../../assets/r9.jpeg";
 
 export default function LibertyHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,8 +20,7 @@ export default function LibertyHero() {
   // ✅ Image arrays
   const desktopImages = [hotel1Breakfast, hotel1, banner3];
   const mobileImages = [
-    "https://i.ibb.co/cSx0QhVr/Red-and-White-Modern-Hotel-Promotion-Poster-5.png",
-    "https://i.ibb.co/TQ0D88B/Red-and-White-Modern-Hotel-Promotion-Poster-6.png",
+   hotel1Breakfast, hotel1, banner3,
     // "/assets/mobile3.jpg",
   ];
   const images = isMobile ? mobileImages : desktopImages;
