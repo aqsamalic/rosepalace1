@@ -14,7 +14,6 @@ export default function GardenHero() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
   // ✅ Desktop images (imported) + Mobile images
   const desktopImages = [banner1, banner2];
   const mobileImages = [

@@ -1,42 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import { Star, Clock, MapPin, Phone, ChevronDown } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { ChevronDown } from "lucide-react";
+// import hotel1Breakfast from "../../assets/hotel1Breakfast.jpg";
+// import hotel1 from "../../assets/hotel1.png";
+// import banner3 from "../../assets/banner3.jpeg";
+import bannerMobile1 from "../../assets/r9.jpeg"; 
+import bannerMobile2 from "../../assets/r8.jpeg"; 
+import bannerMobile3 from "../../assets/r7.jpeg"; 
 
 const RestaurantHero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const heroImages = [
-    'https://i.ibb.co/spHBFQn5/493850038-1191270912793720-761752691122728343-n-Yle-Q5-VNJXPfo-L7-Kk-1.jpg',
-    'https://i.ibb.co/931CrRc9/whatsapp-image-2025-04-02-at-21-45-38-m6-LZ40-NKEKce-Xo-JJ.jpg',
-    'https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80'
-  ];
+  const desktopImages = [bannerMobile1, bannerMobile2, bannerMobile3];
+  const mobileImages = [bannerMobile1, bannerMobile2, bannerMobile3];
+
+  const heroImages = isMobile ? mobileImages : desktopImages;
 
   useEffect(() => {
     setIsVisible(true);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
     }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [heroImages.length]);
 
   const scrollToMenu = () => {
-    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
   };
 
   return (
-    <div id='' className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-screen w-auto overflow-hidden">
       {/* Background Image Slider */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentImage ? 'opacity-100' : 'opacity-0'
+              index === currentImage ? "opacity-100" : "opacity-0"
             }`}
           >
             <img
               src={image}
-              alt={`Restaurant ambiance ${index + 1}`}
+              alt={`Hero ${index + 1}`}
               className="h-full w-full object-cover"
             />
           </div>
@@ -46,70 +62,27 @@ const RestaurantHero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
 
-     
       {/* Hero Content */}
       <div className="relative z-10 flex h-full items-center px-6 lg:px-12">
-        <div className={`max-w-2xl transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          {/* Rating Badge */}
-          <div className="mb-6 inline-flex items-center rounded-full bg-white/10 backdrop-blur-sm px-4 py-2 text-white">
-            <div className="flex items-center space-x-1 mr-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-[#a6192e] text-[#a6192e]" />
-              ))}
-            </div>
-            <span className="text-sm font-medium">4.8 • 500+ Reviews</span>
-          </div>
-
-          {/* Main Heading */}
-          <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Rose Palace
-            <span className="block text-[#a6192e]">Dining</span>
-            Experience
+        <div
+          className={`max-w-2xl transition-all duration-1000 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Welcome to{" "}
+            <span className="block text-amber-400">Rose Palace Dining</span>
           </h1>
-
-          {/* Subtitle */}
-          <p className="text-xl text-gray-200 mb-8 leading-relaxed max-w-lg">
-            Savor authentic flavors crafted with passion. Where every meal becomes a cherished memory in an atmosphere of warmth and elegance.
+          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-lg">
+            Savor authentic flavors crafted with passion in an elegant
+            atmosphere.
           </p>
-
-          {/* Quick Info */}
-          <div className="flex flex-wrap gap-6 mb-10 text-white">
-            <div className="flex items-center space-x-2">
-              <Clock className="h-5 w-5 text-[#a6192e]" />
-              <span>Open until 11 PM</span>
-            </div>
-            {/* <div className="flex items-center space-x-2">
-              <MapPin className="h-5 w-5 text-[#a6192e]" />
-            </div> */}
-            <div className="flex items-center space-x-2">
-              <Phone className="h-5 w-5 text-[#a6192e]" />
-              <span>0314 433 7172</span>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button
-  onClick={() =>
-    window.open(
-      "https://wa.me/923144337172?text=Hi, I would like to reserve a table.",
-      "_blank"
-    )
-  }
-  className="group bg-[#a6192e] hover:bg-amber-600 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:scale-105"
->
-  <span className="group-hover:mr-2 transition-all duration-300">
-    Reserve a Table
-  </span>
-</button>
-
-            <button 
-              onClick={scrollToMenu}
-              className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-xl"
-            >
-              View Menu
-            </button>
-          </div>
+          <button
+            onClick={scrollToMenu}
+            className="bg-amber-400 hover:bg-amber-500 text-black font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:scale-105"
+          >
+            View Menu
+          </button>
         </div>
       </div>
 
@@ -120,7 +93,7 @@ const RestaurantHero = () => {
             key={index}
             onClick={() => setCurrentImage(index)}
             className={`h-2 w-8 rounded-full transition-all duration-300 ${
-              index === currentImage ? 'bg-amber-400' : 'bg-white/30'
+              index === currentImage ? "bg-amber-400" : "bg-white/30"
             }`}
           />
         ))}
@@ -128,19 +101,13 @@ const RestaurantHero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <button onClick={scrollToMenu} className="text-white hover:text-amber-400 transition-colors duration-300">
+        <button
+          onClick={scrollToMenu}
+          className="text-white hover:text-amber-400 transition-colors duration-300"
+        >
           <ChevronDown className="h-8 w-8" />
         </button>
       </div>
-
-      {/* Floating Elements */}
-      {/* <div className="absolute top-1/4 right-10 lg:right-20 z-10 hidden lg:block">
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white max-w-xs">
-          <h3 className="font-semibold text-lg mb-2">Today's Special</h3>
-          <p className="text-sm text-gray-200 mb-3">Grilled Salmon with Herbs</p>
-          <div className="text-2xl font-bold text-amber-400">$28</div>
-        </div>
-      </div> */}
     </div>
   );
 };
