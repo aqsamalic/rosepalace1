@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 // ✅ Desktop images
 import banner1 from "../../assets/banner1.jpg";
-import banner2 from "../../assets/banner2.jpeg";
+import banner2 from "../../assets/banner3.jpeg";
+import banner3 from "../../assets/b1.png";
 
 // ✅ Mobile images (use external URLs to avoid path errors)
 const mobile1 =
@@ -24,7 +25,7 @@ export default function GardenHero() {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  const desktopImages = [banner1, banner2];
+  const desktopImages = [banner1, banner2,banner3];
   const mobileImages = [mobile1, mobile2];
   const images = isMobile ? mobileImages : desktopImages;
 

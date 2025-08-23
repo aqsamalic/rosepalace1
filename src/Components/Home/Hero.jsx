@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 
 // ✅ Desktop images
 import banner1 from "../../assets/bannerrose.png";
-import banner2 from "../../assets/banner2.png";
+import banner4 from "../../assets/banner1.jpg";
+import banner2 from "../../assets/banner3.jpeg";
+// import banner3 from "../../assets/b1.png";
 
 export default function GardenHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,7 +17,7 @@ export default function GardenHero() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   // ✅ Desktop images (imported) + Mobile images
-  const desktopImages = [banner1, banner2];
+  const desktopImages = [banner1, banner2, banner4];
   const mobileImages = [
     "https://i.ibb.co/Zz0yrGGs/Red-and-White-Modern-Hotel-Promotion-Poster-3.png",
     "https://i.ibb.co/wNrHs75g/Red-and-White-Modern-Hotel-Promotion-Poster-4.png",

@@ -14,17 +14,15 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Main menu now includes Restaurant as a page link (path) instead of scroll id
   const menuItems = [
     { name: "Home", id: "home" },
     { name: "Rooms & Rates", id: "hotel-rooms" },
     { name: "Gallery", id: "palace-gallery" },
     { name: "Services", id: "services" },
     { name: "Contact", id: "contact" },
-    { name: "Restaurant", path: "/pages/restaurant" }, // ✅ page navigation
+    { name: "Restaurant", path: "/pages/restaurant" },
   ];
 
-  // Locations dropdown without Restaurant
   const locations = [
     { name: "Rose Palace Hotel (Gulberg)", path: "/" },
     { name: "Hotel Garden Town", path: "/pages/gardentown" },
@@ -66,7 +64,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="bg-white shadow-sm border-b fixed top-0 left-0 w-full z-50"
+      className="bg-white shadow-md border-b fixed top-0 left-0 w-full z-50 transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -76,24 +74,20 @@ const Navbar = () => {
               onClick={() => navigate("/")}
               className="flex items-center focus:outline-none"
             >
-              <img
-                src={logo}
-                alt="Logo"
-                className="h-14 w-auto lg:h-20"
-              />
+              <img src={logo} alt="Logo" className="h-14 w-auto lg:h-20" />
             </button>
           </div>
 
-          {/* Desktop menu */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 items-center">
             {menuItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => {
                   if (item.path) {
-                    navigate(item.path); // page navigation
+                    navigate(item.path);
                   } else {
-                    goToSection(item.id); // smooth scroll
+                    goToSection(item.id);
                   }
                 }}
                 className="text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium"
@@ -131,7 +125,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Mobile Hamburger */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
@@ -143,7 +137,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 flex">
           <div
@@ -176,7 +170,7 @@ const Navbar = () => {
                 </button>
               ))}
 
-              {/* Mobile Locations dropdown */}
+              {/* Mobile Locations Dropdown */}
               <div className="mt-4">
                 <button
                   onClick={() => setIsLocationsOpenMobile((s) => !s)}
