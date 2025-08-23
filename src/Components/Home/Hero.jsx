@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 // ✅ Desktop images
-import banner1 from "../../assets/banner1.jpg";
-import banner2 from "../../assets/banner2.jpeg";
+import banner1 from "../../assets/bannerrose.png";
+import banner2 from "../../assets/banner2.png";
 
 export default function GardenHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
