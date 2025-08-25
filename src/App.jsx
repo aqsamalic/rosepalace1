@@ -14,7 +14,7 @@ import WhatsAppButton from "./Components/Pages/WhatsAppButton";
 
 function App() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
       </Routes>
        <WhatsAppButton />
       <Footer />
-    </>
+    </div>
   );
 }
 

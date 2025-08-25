@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-// import hotel1Breakfast from "../../assets/hotel1Breakfast.jpg";
-// import hotel1 from "../../assets/hotel1.png";
-// import banner3 from "../../assets/banner3.jpeg";
+import hotel1Breakfast from "../../assets/img5.jpg";
+import hotel1 from "../../assets/h1.jpg";
+import banner3 from "../../assets/r4.jpeg";
 import bannerMobile1 from "../../assets/r9.jpeg"; 
 import bannerMobile2 from "../../assets/r8.jpeg"; 
 import bannerMobile3 from "../../assets/r7.jpeg"; 
@@ -12,7 +12,7 @@ const RestaurantHero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const desktopImages = [bannerMobile1, bannerMobile2, bannerMobile3];
+  const desktopImages = [hotel1Breakfast, hotel1, banner3];
   const mobileImages = [bannerMobile1, bannerMobile2, bannerMobile3];
 
   const heroImages = isMobile ? mobileImages : desktopImages;
@@ -60,7 +60,6 @@ const RestaurantHero = () => {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
 
       {/* Hero Content */}
       <div className="relative z-10 flex h-full items-center px-6 lg:px-12">
@@ -69,20 +68,9 @@ const RestaurantHero = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Welcome to{" "}
-            <span className="block text-amber-400">Rose Palace Dining</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-lg">
-            Savor authentic flavors crafted with passion in an elegant
-            atmosphere.
-          </p>
-          <button
-            onClick={scrollToMenu}
-            className="bg-amber-400 hover:bg-amber-500 text-black font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:scale-105"
-          >
-            View Menu
-          </button>
+      
+         
+         
         </div>
       </div>
 

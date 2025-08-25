@@ -7,6 +7,7 @@ import PalaceGallery from "../Home/PalaceGallery";
 import Service from "../Home/Service";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import { TestimonialsSection } from "../Home/TestimonialsSection";
 
 export default function Home() {
   const location = useLocation();
@@ -42,8 +43,10 @@ export default function Home() {
         <section id="hotel-rooms"><HotelRoomsSection /></section>
         {/* <section id="restaurant"><Restaurant /></section> */}
         <section id="palace-gallery"><PalaceGallery /></section>
+           <TestimonialsSection />
         <section id="services"><Service /></section>
         <section id="contact"><Contact /></section>
+     
       </main>
 
     
