@@ -1,231 +1,113 @@
-import React, { useState } from 'react';
-import { Star, MapPin, Clock, Utensils, Phone, Calendar, Award, Eye, Users } from 'lucide-react';
+import { motion } from "framer-motion";
+import A1 from "../../assets/r12.png";
+import welcome from "../../assets/r11.jpeg"; // Adjust the path to your actual image
 
-const BestBuffetRestaurantSection = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
-
-  const restaurantFeatures = [
-    {
-      id: 'rooftop-dining',
-      title: 'Rose Palace Restaurant: Exquisite Dining in Gulberg, Lahore',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      overlayText: 'ENJOY Dining Rooftop',
-      logo: 'ROSE PALACE',
-      description: 'Located in the heart of Gulberg, Lahore, Rose Palace Restaurant is your go-to destination for an exquisite culinary experience. Start your day with our excellent breakfast buffet, featuring a wide variety of delicious options. Our all-day dining restaurant also offers a delectable lunch buffet, perfect for a midday feast. In addition to our sumptuous in-house dining, we',
-      bgColor: 'from-purple-900 to-blue-900',
-      icon: <Utensils className="w-6 h-6" />
-    },
-    {
-      id: 'dinner-buffet',
-      title: 'Experience the Ultimate Dinner Buffet at Rose Palace Restaurant in Gulberg',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      overlayText: 'A DINNER to REMEMBER',
-      subText: 'DINNER BUFFET',
-      tagline: 'Best in Gulberg',
-      logo: 'ROSE PALACE',
-      description: 'Close your eyes and imagine the best dinner buffet you could have. Where would you be sitting? Would it be warm and comfortable? What kind of food would there be? How would you want to feel during this dining experience? You can have that same experience at Rose Palace Restaurant in Gulberg, Lahore. Enjoy a cozy ambiance and a delectable spread of dishes that',
-      bgColor: 'from-red-900 to-orange-800',
-      icon: <Eye className="w-6 h-6" />
-    },
-    {
-      id: 'catering-services',
-      title: 'Dine-in or Call Ahead: Mouth-Watering Delicacies Await at Rose Palace Restaurant',
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      overlayText: 'Magical Escapade',
-      subText: 'CATERING SERVICES',
-      logo: 'ROSE PALACE',
-      description: 'Indulge in our mouth-watering dishes at Rose Palace Restaurant, whether dining in or opting for our convenient catering and delivery services. Our expertly crafted menu caters to diverse palates, from grand celebrations to intimate gatherings. Serving the Rose Community for years, we continuously seek innovative ways to bring fresh, delightful experiences to',
-      bgColor: 'from-gray-800 to-gray-600',
-      icon: <Users className="w-6 h-6" />
-    }
-  ];
-
+ const BestBuffetRestaurantSection = () => {
   return (
-    <div className="bg-white py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
-            BEST BUFFET RESTAURANT IN LAHORE
-          </h1>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Rose Palace restaurant is located in Gulberg, Lahore, and serves an excellent breakfast 
-              buffet and delicious cuisine. This all-day dining restaurant also offers a lunch buffet and 
-              catering services for events. Come and enjoy an affordable breakfast buffet every day. We 
-              serve our patrons a delicious selection of breakfast items, such as
-            </p>
-          </div>
-        </div>
+    <section className="py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="max-w-4xl mx-auto text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#a6192e] mb-4 uppercase text-center ">
+            Our Events
+          </h2>
+          <div className="w-20 h-1 bg-yellow-500 mx-auto mb-8"></div>
+        </motion.div>
 
-        {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {restaurantFeatures.map((feature) => (
-            <div
-              key={feature.id}
-              className="group cursor-pointer"
-              onMouseEnter={() => setHoveredCard(feature.id)}
-              onMouseLeave={() => setHoveredCard(null)}
-            >
-              {/* Image Card */}
-              <div className="relative overflow-hidden rounded-2xl shadow-xl mb-6 h-80">
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                
-                {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgColor} opacity-80`}></div>
-                
-                {/* Content Overlay */}
-                <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-                  
-                  {/* Top Section - Logo */}
-                  <div className="text-right">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 inline-block">
-                      <span className="text-sm font-bold">{feature.logo}</span>
-                    </div>
-                  </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative max-w-full"
+          >
+            {/* Outer Image Effect */}
+            <div className="absolute top-4 left-4 right-4 bottom-4 border-4 border-white bg-white rounded-lg shadow-lg z-0"></div>
 
-                  {/* Center Section - Main Text */}
-                  <div className="text-center">
-                    <h3 className="text-3xl md:text-4xl font-bold mb-2 leading-tight">
-                      {feature.overlayText}
-                    </h3>
-                    {feature.subText && (
-                      <p className="text-xl font-semibold mb-2">{feature.subText}</p>
-                    )}
-                    {feature.tagline && (
-                      <p className="text-lg opacity-90">{feature.tagline}</p>
-                    )}
-                  </div>
+            {/* Foreground Image */}
+          <img
+  src={A1}
+  alt="Lawrence View Hotel Vintage"
+  className="relative rounded-lg shadow-xl w-full h-auto max-h-[30rem] object-cover z-10"
+/>
 
-                  {/* Bottom Section - Contact Info */}
-                  <div className="text-center text-sm opacity-90">
-                    <p>0314 433 7172  | 0317 433 7172  | WWW.ROSEPALACELRESTAURANT.COM</p>
-                  </div>
-                </div>
-
-                {/* Hover Effect Indicator */}
-                <div className={`absolute top-4 left-4 bg-white text-gray-800 p-2 rounded-full transition-all duration-300 ${
-                  hoveredCard === feature.id ? 'scale-110 shadow-lg' : 'scale-100'
-                }`}>
-                  {feature.icon}
-                </div>
-              </div>
-
-              {/* Description Card */}
-              <div className="bg-gray-50 rounded-2xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-bold text-gray-800 mb-4 leading-tight">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-base">
-                  {feature.description}
-                </p>
-                
-                {/* Read More Link */}
-                <div className="mt-4">
-                  <button className="text-red-600 font-semibold hover:text-red-700 transition-colors duration-200 flex items-center space-x-1">
-                    <span>Read More</span>
-                    <span className="text-lg">→</span>
-                  </button>
-                </div>
-              </div>
+            {/* Golden Overlay Content */}
+            <div className="absolute top-6 left-6 right-6 p-6 bg-[#a6192e]  bg-opacity-85 rounded-md shadow-md text-white z-20">
+              <h4 className="text-xl font-semibold mb-2 text-white">RosePalace Restaurant </h4>
+              <p className="text-sm leading-relaxed">
+             Wedding Events at Rose Palace Restaurant - An Unforgettable Experience
+              </p>
             </div>
-          ))}
-        </div>
+          </motion.div>
 
-        {/* Bottom Statistics Section */}
-        {/* <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 text-white">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="flex justify-center mb-3">
-                <div className="bg-white/20 rounded-full p-3">
-                  <Star className="w-8 h-8" />
-                </div>
-              </div>
-              <div className="text-3xl font-bold mb-1">4.9</div>
-              <div className="text-sm opacity-90">Customer Rating</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="flex justify-center mb-3">
-                <div className="bg-white/20 rounded-full p-3">
-                  <MapPin className="w-8 h-8" />
-                </div>
-              </div>
-              <div className="text-3xl font-bold mb-1">3</div>
-              <div className="text-sm opacity-90">Prime Locations</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="flex justify-center mb-3">
-                <div className="bg-white/20 rounded-full p-3">
-                  <Clock className="w-8 h-8" />
-                </div>
-              </div>
-              <div className="text-3xl font-bold mb-1">24/7</div>
-              <div className="text-sm opacity-90">Service Available</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="flex justify-center mb-3">
-                <div className="bg-white/20 rounded-full p-3">
-                  <Award className="w-8 h-8" />
-                </div>
-              </div>
-              <div className="text-3xl font-bold mb-1">15+</div>
-              <div className="text-sm opacity-90">Years Excellence</div>
-            </div>
-          </div>
-        </div> */}
+         
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="space-y-6 max-w-full"
+          >
 
-        {/* Call to Action Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gray-100 rounded-2xl p-8">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">
-              Ready to Experience Lahore's Best Buffet?
+<h3 className="text-sm text-[#a6192e]  font-semibold">FROM $100.00 PER Event</h3>
+            <h3 className="text-2xl font-semibold text-gray-900">
+             Celebrate Your Wedding at Rose Palace Restaurant – A Timeless Experience
             </h3>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Join thousands of satisfied customers who have made Rose Palace their favorite dining destination. 
-              Book your table today and discover why we're rated as the best buffet restaurant in Lahore.
+            <p className="text-gray-600 leading-relaxed">
+             Celebrate your special day at Rose Palace Restaurant and create lasting memories in our elegant venue. Located in Gulberg, Lahore, we offer a picturesque setting for weddings and receptions.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Calendar className="w-5 h-5" />
-                <span>Book Your Table</span>
-              </button>
-              <button className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-4 px-8 rounded-full transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span>Call Now</span>
-              </button>
+            <p className="text-gray-600 leading-relaxed">
+             Our expert team ensures every detail is perfect, from exquisite decor to personalized catering options. Whether you envision a grand affair or an intimate gathering, our spacious halls and impeccable service guarantee a memorable event. Let Rose Palace Restaurant be the backdrop to your love story, where every moment is cherished and every guest is treated to an unforgettable experience.
+            </p>
+            <div className="text-gray-700">
+              Recommended on: <span className="text-[#a6192e] ">Book_Holidays</span>, RosePalace Hotel
             </div>
-
-            {/* Contact Information */}
-            {/* <div className="mt-8 pt-6 border-t border-gray-300">
-              <div className="flex flex-wrap justify-center items-center gap-6 text-gray-600">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4" />
-                  <span>0000-123-456</span>
+          </motion.div>
+        </div>
+        <div className="bg-white py-10 mt-20 px-4 md:px-20">
+              <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+                {/* Text Section */}
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#a6192e] mb-4 uppercase text-center md:text-left">
+                    Enjoy Outdoor Birthday Celebrations at Rose Palace Hotel's Rooftop Restaurant
+                  </h2>
+            
+        
+                  <p className="text-gray-700 mb-4">
+                   Celebrate birthdays in style at Rose Palace Hotel's rooftop restaurant, offering a picturesque outdoor setting in Gulberg, Lahore. Enjoy the perfect blend of scenic views and elegant ambiance as you gather with loved ones. 
+                  </p>
+        
+                  <p className="text-gray-700 mb-4">
+                    Features a 24-hour front desk, room service and currency exchange for guests.
+                  </p>
+        
+                  <p className="text-gray-700 mb-4">
+                    Indulge in our delicious menu featuring a variety of culinary delights, served with warmth and hospitality. Whether it's a milestone birthday or a special occasion, our rooftop venue provides the ideal backdrop for creating cherished memories. Celebrate with us and make your birthday truly unforgettable.
+                  </p>
+        
+                  <p className="text-gray-700">
+                Make your birthday celebration extraordinary at Rose Palace Hotel, where every moment is as unforgettable as the view.
+                  </p>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4" />
-                  <span>0301-789-000</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>Gulberg, Lahore</span>
+        
+                {/* Image Section */}
+                <div className="rounded-lg shadow-lg overflow-hidden">
+                  <img
+                    src={welcome} // Adjust the path to your actual image
+                    alt="Rose Palace Hotel Room"
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
-            </div> */}
-          </div>
-        </div>
+            </div>
       </div>
-    </div>
+    </section>
   );
 };
-
 export default BestBuffetRestaurantSection;

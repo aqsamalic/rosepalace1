@@ -20,11 +20,23 @@ const Restaurant = () => {
   const renderSection = () => {
     switch (activeSection) {
       case "hero":
-        return <Section id="hero"><RestaurantHero /></Section>;
+        return (
+          <Section id="hero">
+            <RestaurantHero />
+          </Section>
+        );
       case "about":
-        return <Section id="about"><RestaurantAboutSection /></Section>;
+        return (
+          <Section id="about">
+            <RestaurantAboutSection />
+          </Section>
+        );
       case "menu":
-        return <Section id="menu"><MenuDisplay /></Section>;
+        return (
+          <Section id="menu">
+            <MenuDisplay />
+          </Section>
+        );
       case "buffet":
         return (
           <Section id="buffet">
@@ -42,9 +54,15 @@ const Restaurant = () => {
       default:
         return (
           <>
-            <Section id="hero"><RestaurantHero /></Section>
-            <Section id="about"><RestaurantAboutSection /></Section>
-            <Section id="menu"><MenuDisplay /></Section>
+            <Section id="hero">
+              <RestaurantHero />
+            </Section>
+            <Section id="about">
+              <RestaurantAboutSection />
+            </Section>
+            <Section id="menu">
+              <MenuDisplay />
+            </Section>
             <Section id="buffet">
               <BestBuffetRestaurantSection />
               <BuffetPricingCards />
@@ -60,10 +78,12 @@ const Restaurant = () => {
 
   return (
     <div className="restaurant-page bg-white text-gray-900 w-full overflow-x-hidden">
-      {/* Fixed navbar (make sure your RestaurantNavbar uses w-full, not 100vw) */}
+      {/* ✅ Fixed Navbar */}
       <RestaurantNavbar onSectionChange={setActiveSection} />
+
       <main className="pt-20 w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        {/* ✅ Full width on desktop, padding only on small screens */}
+        <div className="w-full px-4 sm:px-6 lg:px-0 max-w-full">
           {renderSection()}
         </div>
       </main>
