@@ -1,198 +1,148 @@
-import React from 'react';
-import { Clock, Star, MapPin, Phone, Users } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+
+// ✅ Import your buffet images here
+import breakfastImg from "../../assets/r6.jpeg";
+import hiteaImg from "../../assets/r13.jpeg";
+import dinnerImg from "../../assets/r14.jpeg";
 
 const MenuDisplay = () => {
-
-  const buffetMenus = [
-    {
-      id: 'breakfast',
-      title: 'Daily Breakfast Buffet',
-      price: '1,299',
-      originalPrice: '1,500',
-      items: '50+',
-      bgColor: 'from-amber-50 to-orange-100',
-      headerColor: 'bg-orange-600',
-      schedule: [
-        { day: 'Mon to Sat', time: '07:00 am to 10:00 am' },
-        { day: 'Sunday', time: '07:00 am to 12:00 pm' }
-      ],
-      totalItems: '50+ Delicious Items'
-    },
-    {
-      id: 'lunch',
-      title: 'Lunch Cum Hi-Tea Buffet',
-      price: '2,399',
-      originalPrice: '2,800',
-      items: '150+',
-      bgColor: 'from-blue-50 to-cyan-100',
-      headerColor: 'bg-blue-600',
-      schedule: [
-        { day: 'Slot 1', time: '12:30pm to 02:45pm' },
-        { day: 'Slot 2', time: '03:00pm to 04:45pm' },
-        { day: 'Slot 3', time: '05:00pm to 06:45pm' }
-      ],
-      totalItems: '150+ Delicious Items'
-    },
-    {
-      id: 'dinner',
-      title: 'Dinner Buffet',
-      price: '2,799',
-      originalPrice: '3,200',
-      items: '150+',
-      bgColor: 'from-purple-50 to-pink-100',
-      headerColor: 'bg-purple-600',
-      schedule: [
-        { day: 'Slot 1', time: '07:15 pm to 09:00 pm' },
-        { day: 'Slot 2', time: '09:15 pm to 11:00 pm' },
-        { day: 'Slot 3', time: '11:15 pm to 12:30 am' }
-      ],
-      totalItems: '150+ Delicious Items'
-    }
-  ];
-
   return (
-    <div id='menu' className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            BEST BUFFET RESTAURANTS IN LAHORE
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold text-red-600 mb-6">
-            Pakistan's Largest & Longest Premium Buffet (150+ Items & 500+ Feet Long Buffet)
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Are you looking for the best buffet restaurants to visit further than Rose Palace Hotel 
-              Gulberg. Our hotel offers a wide range of buffet options for breakfast, hi-tea cum lunch, and dinner.
-            </p>
+    <section className="w-full px-4 py-12 bg-white">
+      {/* Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#a6192e] uppercase"
+      >
+        Best Buffet Restaurants in Lahore
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="text-center max-w-2xl md:max-w-3xl mx-auto mt-4 text-gray-700 text-base sm:text-lg md:text-xl px-2"
+      >
+        Are you looking for the best buffet restaurants in Lahore? Look no
+        further than Rose Palace Hotel Gulberg. Our hotel offers a wide range
+        of buffet options for breakfast, hi-tea cum lunch, and dinner.
+      </motion.p>
+
+      {/* Buffets Grid */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Breakfast */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center"
+        >
+          <div className="w-[80%]">
+            <img
+              src={breakfastImg}
+              alt="Breakfast Buffet"
+              className="w-full shadow-xl rounded-md object-contain"
+            />
+            <div className="mt-2 text-center px-2 w-full">
+              <h3 className="font-bold text-xl sm:text-2xl md:text-3xl">
+                Daily Breakfast Buffet
+              </h3>
+              <p className="text-gray-800 font-semibold text-lg sm:text-xl">
+                1,299/- (Incl. Tax)
+              </p>
+              <p className="mt-1 text-gray-600 text-base sm:text-lg">
+                Mon to Sat: 07:00 am to 10:00 am
+              </p>
+              <p className="text-gray-600 text-base sm:text-lg">
+                Sunday: 07:00 am to 12:00 pm
+              </p>
+              <p className="text-green-600 mt-1 font-medium text-base sm:text-lg">
+                ✅ 50+ Delicious Items
+              </p>
+            </div>
           </div>
-          
-          {/* Contact Info */}
-          <div className="flex flex-wrap justify-center items-center gap-6 mt-8 text-gray-700">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-red-600" />
-              <span>Gulberg, Lahore</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-red-600" />
-              <span>0314 433 7172 </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Star className="w-5 h-5 text-yellow-500" />
-              <span>5-Star Experience</span>
+        </motion.div>
+
+        {/* Hi-Tea */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center"
+        >
+          <div className="w-[80%]">
+            <img
+              src={hiteaImg}
+              alt="Hi-Tea Buffet"
+              className="w-full shadow-xl rounded-md object-contain"
+            />
+            <div className="mt-2 text-center px-2 w-full">
+              <h3 className="font-bold text-xl sm:text-2xl md:text-3xl">
+                Lunch Cum Hi-Tea Buffet
+              </h3>
+              <p className="text-gray-800 font-semibold text-lg sm:text-xl">
+                2,399/- (Incl. Tax)
+              </p>
+              <p className="mt-1 text-gray-600 text-base sm:text-lg">
+                Slot 1: 12:30 pm to 02:45 pm
+              </p>
+              <p className="text-gray-600 text-base sm:text-lg">
+                Slot 2: 03:00 pm to 04:45 pm
+              </p>
+              <p className="text-gray-600 text-base sm:text-lg">
+                Slot 3: 05:00 pm to 06:45 pm
+              </p>
+              <p className="text-green-600 mt-1 font-medium text-base sm:text-lg">
+                ✅ 150+ Delicious Items
+              </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Buffet Menu Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {buffetMenus.map((menu) => (
-            <div
-              key={menu.id}
-              className={`bg-gradient-to-br ${menu.bgColor} rounded-2xl shadow-xl overflow-hidden border-2 border-gray-200 hover:shadow-2xl transition-all duration-300`}
-            >
-              {/* Buffet Image Section */}
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={`https://images.unsplash.com/photo-${
-                    menu.id === 'breakfast' ? '1565895405132-5a538c3aedc7' : 
-                    menu.id === 'lunch' ? '1555939594-f7405dc1dd8e' : 
-                    '1414235077428-338989a2e8c0'
-                  }?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
-                  alt={`${menu.title} spread`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold mb-2">
-                    {menu.items} Items Available
-                  </div>
-                </div>
-                <div className="absolute top-4 right-4">
-                  <div className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                    Best Value
-                  </div>
-                </div>
-              </div>
-
-              {/* Menu Header */}
-              <div className={`${menu.headerColor} text-white p-6 relative overflow-hidden`}>
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="relative z-10">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold leading-tight">{menu.title}</h3>
-                    <div className="text-right">
-                      <div className="text-3xl font-bold">Rs. {menu.price}</div>
-                      <div className="text-sm line-through opacity-75">Rs. {menu.originalPrice}</div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                      {menu.items} Items
-                    </span>
-                    <span className="text-sm">(Incl. Tax)</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Menu Content */}
-              <div className="p-6">
-                {/* Schedule */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-gray-800 mb-3 flex items-center">
-                    <Clock className="w-5 h-5 mr-2 text-gray-600" />
-                    Schedule
-                  </h4>
-                  <div className="space-y-2">
-                    {menu.schedule.map((slot, index) => (
-                      <div key={index} className="flex justify-between items-center bg-white/60 px-3 py-2 rounded-lg">
-                        <span className="font-medium text-gray-700">{slot.day}:</span>
-                        <span className="text-gray-600">{slot.time}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Total Items */}
-                <div className="mb-6">
-                  <div className="bg-green-100 border border-green-300 rounded-lg p-3 text-center">
-                    <span className="text-green-800 font-semibold">{menu.totalItems}</span>
-                  </div>
-                </div>
-
-                {/* Book Now Button */}
-                <div className="mt-6">
-                  <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
-                    <Users className="w-5 h-5" />
-                    Book Table Now
-                  </button>
-                </div>
-              </div>
+        {/* Dinner */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center"
+        >
+          <div className="w-[80%]">
+            <img
+              src={dinnerImg}
+              alt="Dinner Buffet"
+              className="w-full shadow-xl rounded-md object-contain"
+            />
+            <div className="mt-2 text-center px-2 w-full">
+              <h3 className="font-bold text-xl sm:text-2xl md:text-3xl">
+                Dinner Buffet
+              </h3>
+              <p className="text-gray-800 font-semibold text-lg sm:text-xl">
+                2,799/- (Incl. Tax)
+              </p>
+              <p className="mt-1 text-gray-600 text-base sm:text-lg">
+                Slot 1: 07:15 pm to 09:00 pm
+              </p>
+              <p className="text-gray-600 text-base sm:text-lg">
+                Slot 2: 09:15 pm to 11:00 pm
+              </p>
+              <p className="text-gray-600 text-base sm:text-lg">
+                Slot 3: 11:15 pm to 12:30 am
+              </p>
+              <p className="text-green-600 mt-1 font-medium text-base sm:text-lg">
+                ✅ 150+ Delicious Items
+              </p>
             </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA Section */}
-        {/* <div className="mt-16 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">Experience Pakistan's Largest Buffet</h3>
-          <p className="text-xl mb-6 opacity-90">500+ Feet Long Buffet • 150+ Premium Items • 5-Star Service</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-200">
-              Call for Reservations
-            </button>
-            <button className="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-red-600 transition-colors duration-200">
-              View Location
-            </button>
           </div>
-        </div> */}
-
-        {/* Footer Info */}
-        {/* <div className="mt-8 text-center text-gray-500 text-sm">
-          <p>• Advance booking recommended • Special group packages available • All prices include taxes •</p>
-        </div> */}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

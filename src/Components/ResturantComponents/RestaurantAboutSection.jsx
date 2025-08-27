@@ -33,10 +33,10 @@ const RestaurantAboutSection = () => {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#a6192e] mb-4">
             ROOF TOP RESTAURANT GULBERG, LAHORE
           </h1>
-          <div className="w-24 h-1 bg-red-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-[#a6192e] mx-auto"></div>
         </div>
 
         {/* Main About Section */}
@@ -45,7 +45,7 @@ const RestaurantAboutSection = () => {
           {/* Left Side - Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#a6192e] mb-8">
                 About us
               </h2>
             </div>
@@ -55,7 +55,7 @@ const RestaurantAboutSection = () => {
               {aboutSections.map((section, index) => (
                 <div key={index} className="group">
                   <div className="flex items-start space-x-4 mb-4">
-                    <div className="flex-shrink-0 p-3 bg-red-100 rounded-full text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                    <div className="flex-shrink-0 p-3 bg-red-100 rounded-full text-[#a6192e] group-hover:bg-[#a6192e] group-hover:text-white transition-colors duration-300">
                       {section.icon}
                     </div>
                     <div className="flex-1">
@@ -73,7 +73,7 @@ const RestaurantAboutSection = () => {
 
             {/* Call to Action */}
             <div className="pt-6">
-              <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full transition-colors duration-200 transform hover:scale-105">
+              <button className="bg-[#a6192e] hover:bg-[#a6192e] text-white font-bold py-4 px-8 rounded-full transition-colors duration-200 transform hover:scale-105">
                 Experience Our Hospitality
               </button>
             </div>
