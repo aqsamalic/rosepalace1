@@ -8,7 +8,7 @@ import dinnerImg from "../../assets/r14.jpeg";
 
 const MenuDisplay = () => {
   return (
-    <section className="w-full px-4 py-12 bg-white">
+    <section className="w-full mt-20 px-4 py-12 bg-white">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
